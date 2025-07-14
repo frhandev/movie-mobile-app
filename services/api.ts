@@ -1,9 +1,10 @@
 export const TMDB_CONFIG = {
   BASE_URL: "https://api.themoviedb.org/3",
-  API_KEY: process.env.EXPO_PUBLIC_MOVIE_API_KEY,
+  API_KEY:
+    "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4MzA5NWNlNjdjNDFhNmFmYjgwNWFiZGQ2NDU3OThkNiIsIm5iZiI6MTcyMzAxOTE2Ny42NTc5OTk4LCJzdWIiOiI2NmIzMmY5ZjA5MmU3Y2M1OWZmYzdkMDciLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.bXmS9-jS3D0UUWqEf3mPA45iAxGVIThFF_PHkt8M0OY",
   headers: {
     accept: "application/json",
-    Authorization: `Bearer ${process.env.EXPO_PUBLIC_MOVIE_API_KEY}`,
+    Authorization: `Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4MzA5NWNlNjdjNDFhNmFmYjgwNWFiZGQ2NDU3OThkNiIsIm5iZiI6MTcyMzAxOTE2Ny42NTc5OTk4LCJzdWIiOiI2NmIzMmY5ZjA5MmU3Y2M1OWZmYzdkMDciLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.bXmS9-jS3D0UUWqEf3mPA45iAxGVIThFF_PHkt8M0OY`,
   },
 };
 
@@ -24,5 +25,5 @@ export const fetchMovies = async ({ query }: { query: string }) => {
 
   const data = await response.json();
 
-  return data.resaults;
+  return data.results;
 };
